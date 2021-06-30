@@ -1,0 +1,46 @@
+h2 {
+    margin: 50px 0 30px 23.5%;
+    font-weight: bold;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.erro-login {
+    border: red solid 1px;
+    border-radius: 5px;
+    background-color: rgba(240, 128, 128, 0.3);
+    color: red;
+    display: block;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+}
+
+form label {
+    font-size: 24px;
+
+}
+
+.erro {
+    color: red;
+    float: right;
+    position: relative;
+    top: 10px;
+    left: -5px;
+}
+
+form input {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+form button.btn {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 225px;
+    height: 50px;
+    font-size: 20px;
+}

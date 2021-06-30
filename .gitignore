@@ -1,0 +1,4 @@
+.idea
+venv/
+settings.toml
+__pycache__/

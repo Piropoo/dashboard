@@ -1,0 +1,28 @@
+{% extends 'template.html' %}
+{% block content %}
+
+    <h2> Entre em uma conta para acessar o dashboard! </h2>
+
+    <form method="POST" action="/autenticar">
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}      
+                {% for message in messages %}
+                    <span class="erro-login">{{ message }}</span>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <label for="login">Login</label> <span class="erro" data-erro-login></span>
+        <input type="text" id="login" class="form-control" name="login"
+        placeholder="Insira seu email ou username" data-form-login>
+
+        <label for="senha">Senha</label> <span class="erro" data-erro-senha></span>
+        <input type="password" id="senha" class="form-control" name="senha"
+        placeholder="Insira sua senha" data-form-senha>
+
+        <button class="btn btn-primary">Entrar</button>
+
+    </form>
+
+{% endblock %}

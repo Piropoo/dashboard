@@ -1,0 +1,24 @@
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.dashboard {
+    background-color: #eee;
+    width: 75%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.dashboard img{
+    width: 145px;
+    display: block;
+    margin: 84.5px auto 0 auto;
+}

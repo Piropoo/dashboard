@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{% block content %}
+
+    <h2>Dashboard</h2>
+    <div class="dashboard">
+
+        <p>Olá {{ nome }}, bem vindo(a) ao dashboard! Nada aqui por enquanto.</p>
+        
+        <img src="{{ url_for('static', filename='img/lupa.webp') }}">
+
+    </div>
+
+{% endblock %}

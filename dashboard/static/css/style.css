@@ -1,0 +1,49 @@
+body {
+    background-color: #ccc;
+}
+
+header {
+    height: 100px;
+    background-color: #444;
+    padding: 20px 30px;
+}
+
+h1 {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 0 0 20px;
+}
+
+h1 a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+nav {
+    float: right;
+    margin-right: 60px;
+}
+
+nav ul {
+    display: inline-block;
+    height: 60px;
+    margin: 0;
+    line-height: 60px;
+}
+
+nav img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+nav li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #bbb;
+}
