@@ -1,7 +1,8 @@
 from dashboard.ext.database import cria_database
 
 # Pega o user
-print('Para configurar, você ´re')
+print('Aviso: Antes de configurar é necessário criar uma database vazia no seu mysql com o nome "dashboard" '
+      'caso não exista."')
 user = input('Digite o user da sua conexão com o banco de dados mysql'
              ' (não insira nada para deixar como "root" por padrão)\nuser:').strip()
 if user == '':
