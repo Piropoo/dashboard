@@ -10,9 +10,9 @@ def index():
         session['usuario_logado'] = False
 
     if not session['usuario_logado']:
-        return redirect('/login')
+        return redirect(url_for('views.login'))
     else:
-        return redirect('/dashboard')
+        return redirect(url_for('views.dashboard'))
 
 
 @bp.route('/login')
@@ -27,6 +27,7 @@ def login():
 def autenticar_login(login_digitado, password_digitado):
 
     users = Usuario.query.all()
+    usuario = None
 
     usuario_existe = False
     if '@' in login_digitado:
@@ -58,7 +59,7 @@ def autenticar_login(login_digitado, password_digitado):
         if campo == 'email':
             dados = {'erro': 'Este email não está cadastrado.', 'logado': False}
             return dados
-        else:
+        elif campo == 'username':
             dados = {'erro': 'Este usuário não está cadastrado.', 'logado': False}
             return dados
 
@@ -78,7 +79,7 @@ def autenticar():
     else:
         flash(dados['erro'])
 
-    return redirect('/')
+    return redirect(url_for('views.index'))
 
 
 @bp.route('/dashboard')
@@ -91,7 +92,7 @@ def dashboard():
 @bp.route('/logout')
 def logout():
     session['usuario_logado'] = False
-    return redirect('/')
+    return redirect(url_for('views.index'))
 
 
 def init_app(app):
